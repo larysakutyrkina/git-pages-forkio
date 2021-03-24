@@ -1,0 +1,169 @@
+.prices {
+  @include Montserrat;
+  background-image: url("../img/prices_bg.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+  padding-top: 80px;
+  padding-bottom: 12px;
+  margin-top: -18px;
+
+  &__title {
+    color: $white;
+    font-weight: $fw-bold;
+    font-size: 28px;
+    line-height: 42px;
+    text-align: center;
+  }
+
+  &__cards {
+    padding-top: 32px;
+   @include flex;
+  }
+
+  &__wrapper {
+    text-align: center;
+  }
+}
+
+.item-price {
+  color: $white;
+  background-color: $prices_bg;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 257px;
+  height: 457px;
+  margin-bottom: 18px;
+  flex-direction: column;
+  flex-basis: 90%;
+
+  &__title {
+    font-size: 24px;
+    background-color: $prices_bg;
+    text-transform: uppercase;
+    padding: 36px 0;
+    width: 100%;
+    text-align: center;
+  }
+
+  &__value {
+    font-size: 60px;
+
+    & span {
+      font-weight: $fw-bold;
+    }
+
+    &:after {
+      content: "per month";
+      text-transform: uppercase;
+      font-size: 14px;
+      line-height: 16px;
+      display: block;
+      padding-top: 16px;
+    }
+  }
+
+  &__divide {
+    width: 60px;
+    height: 5px;
+    background-color: $violet;
+    display: block;
+    margin: 0 auto;
+  }
+
+  &__subtitle {
+    font-size: 16px;
+    line-height: 28px;
+  }
+
+  &__btn {
+    padding: 14px 36px;
+    border-radius: 25px;
+    text-transform: uppercase;
+    text-decoration: none;
+    background-color: $prices_btn;
+    margin-bottom: 37px;
+    color: $white;
+
+    &:hover {
+      color: inherit;
+      background-color: $prices_btn;
+    }
+  }
+
+}
+
+.item-price--active {
+  height: 560px;
+  max-width: 299px;
+  flex-basis: 100%;
+  background-color: $prices_active;
+
+  &:hover {
+    box-shadow: rgba(0, 0, 0, .8) 0 4px 8px -4px;
+  }
+
+  > .item-price__title {
+    padding: 45px 0;
+    background-color: rgba(0, 0, 0, .11);
+  }
+
+  > .item-price__value {
+    font-size: 82px;
+  }
+
+  > .item-price__btn {
+    padding: 18px 48px;
+    text-transform: uppercase;
+    background-color: $prices_btn;
+    margin-bottom: 37px;
+  }
+}
+
+.container{
+  @include container;
+}
+
+
+@media (min-width: 481px) {
+  .prices {
+    padding-top: 90px;
+    padding-bottom: 90px;
+
+    &__title {
+      font-size: 42px;
+    }
+
+    &__cards {
+      padding-top: 40px;
+    }
+  }
+
+  .item-price{
+    flex-basis: 36%;
+    margin: 15px 12px;
+  }
+
+  .item-price--active{
+    flex-basis: 40%;
+    margin-left: 12px;
+  }
+}
+@media (min-width: 993px) {
+  .prices {
+    &__cards {
+      padding-top: 60px;
+    }
+  }
+
+  .item-price{
+    flex-basis: 22%;
+    margin: 0 7px;
+  }
+
+  .item-price--active{
+    flex-basis: 25%;
+    margin-left: 7px;
+  }
+}

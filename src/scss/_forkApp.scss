@@ -1,0 +1,101 @@
+.forkApp{
+
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+
+  &__bg{
+    background-image: url("../img/img2.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+
+  }
+  &__title{
+    padding-top: 40px;
+    font-weight: $fw-bold;
+    color: $white;
+    font-size: 48px;
+  }
+
+  &__middle{
+    padding-top: 40px;
+    font-size: 18px;
+    color: $violet;
+
+  }
+
+  &__text{
+    padding-top: 40px;
+    font-size: 14px;
+    color:$services_text;
+  }
+
+  &__btn{
+    padding-top: 200px;
+    bottom: 10px;
+  }
+
+  &__button{
+    background-color: $violet;
+    color: $white;
+    padding: 11px 40px;
+    border-radius: 50px;
+    border:none;
+    font-size: 18px;
+    cursor: $cursor;
+    outline: none;
+
+  }
+
+  &__text-gray{
+    color:$services_text;
+    font-size: 14px;
+    text-align: center;
+    margin-top: 20px;
+  }
+}
+
+
+.container{
+ @include container;
+}
+
+@media (min-width:481px ){
+  .forkApp__button{
+    padding: 11px 60px;
+
+  }
+
+
+}
+
+
+
+@media (min-width:993px ){
+  .forkApp{
+
+  &__bg {
+    background-image: url("../img/img3.png");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+  }
+    &__button{
+      background-color: $violet;
+      color: $white;
+      padding: 11px 40px;
+      border-radius: 50px;
+      border:none;
+      font-size: 18px;
+      cursor: $cursor;
+
+    }
+    &__button:hover{
+      @include hoverButton;
+    }
+
+}
+}
+

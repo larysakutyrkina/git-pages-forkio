@@ -1,0 +1,136 @@
+.editor {
+  padding: 100px 0 70px 0;
+  background-color: $white;
+  font-family: "Montserrat", sans-serif;
+  &__title {
+    @include Montserrat;
+    letter-spacing: 0;
+    font-weight: $fw-bold;
+    color: $editor_title_color;
+    text-align: center;
+    text-transform: uppercase;
+  }
+  &__subtitle {
+    @include Lato;
+    letter-spacing: 0;
+    text-align: center;
+    color: $dark;
+    margin: 0 0 13px 0;
+  }
+  &__buttons {
+    @include flex;
+  }
+}
+
+.editors {
+  &__btn {
+    color: $editor_btn;
+    font-size: 12px;
+    @include flex;
+    line-height: 20px;
+    margin-right: 10px;
+    margin-bottom: 20px;
+  }
+  &__icon {
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid $editor_btn;
+    background-color: $icon_bg;
+    border-radius: 2px;
+    padding: 5px 12px;
+    fill: $svg_color;
+    color: $svg_color;
+    text-decoration: none;
+    span {
+      padding-left: 2px;
+      font-weight: $fw-bold;
+    }
+    &:hover {
+      background-color: $greybg;
+    }
+  }
+  &__number {
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: center;
+    align-items: center;
+    font-weight: 700;
+    padding: 5px 12px;
+    border-radius: 2px;
+    background-color: $bggray;
+    border: 1px solid $editor_btn;
+    color: $dark;
+    text-decoration: none;
+
+    &:hover {
+      transition: .5s;
+      color: gray;
+    }
+  }
+  >li:last-child, >li:nth-child(2) {
+    margin-right: 0;
+  }
+  >li:last-child {
+    margin-left: 10px;
+  }
+}
+
+.container{
+  @include container;
+}
+
+
+
+@media  (min-width: 993px) {
+
+  .editor{
+    padding: 120px 0 98px 0;
+    background-color: $white;
+    &__title {
+      font-size: 54px;
+      line-height: 54px;
+      margin-bottom: 30px;
+    }
+    &__subtitle {
+      margin: 0 10px 24px 10px;
+    }
+  }
+}
+@media (min-width: 481px) {
+  .editor{
+    padding: 120px 0 98px 0;
+    background-color: $white;
+
+    &__title {
+      font-size: 42px;
+      line-height: 42px;
+      margin-bottom: 30px;
+    }
+
+    &__subtitle {
+      margin: 0 10px 24px 10px;
+    }
+  }
+}
+
+
+@media (min-width: 320px) {
+
+  .editor {
+    padding: 70px 0 88px 0;
+
+    &__title {
+      font-size: 28px;
+      line-height: 28px;
+      margin: 0 0 27px 0;
+    }
+
+    &__subtitle {
+      margin: 0 10px 36px 10px;
+      font-size: 14px;
+      line-height: 20px;
+    }
+  }
+}

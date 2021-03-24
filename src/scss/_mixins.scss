@@ -1,0 +1,28 @@
+@mixin link{
+  text-decoration: none;
+}
+
+
+@mixin Montserrat {
+  font-family: "Montserrat", sans-serif;
+}
+
+@mixin Lato {
+  font-family: "Lato", sans-serif;
+}
+
+@mixin container{
+ padding: 0 10px;
+}
+
+@mixin hoverButton {
+  color: $violet;
+  background: $white;
+}
+
+@mixin flex {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+}
